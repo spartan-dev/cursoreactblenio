@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+
+    <title>React for spartans</title>
+  </head>
+  <body class="bg-purple-200 min-h-screen">
+    <div id="app"></div>
+
+    <script type="text/babel">
+      //esto se le llama un componente JSX
+      const App = () => {
+        return (
+          <div>
+            <Navbar />
+            <Card />
+            <InfoText />
+            <Contact />
+          </div>
+        );
+      };
+      //otro componente #Navbar
+      const Navbar = (params) => {
+        return (
+          <nav className="mb-12 w-full h-16 bg-purple-600 flex flex-col justify-end items-center">
+            <ul className="flex flex-row w-16 h-full justify-center items-center">
+              <li className="mr-4 text-white">About</li>
+              <li className="mr-4 text-white">Utilities</li>
+              <li className="mr-4 text-white">Craft</li>
+              <li className="mr-4 text-white">Contact</li>
+            </ul>
+          </nav>
+        );
+      };
+      const InfoText = () => {
+        return (
+          <section className="mb-12 h-3/5 w-3/5 container mx-auto px-6 py-6 box-content bg-purple-300 rounded-md ">
+            <div className="h-full container p-4 box-border bg-purple-400 mx-auto">
+              <img
+                className="float-right w-52 h-52"
+                src="https://cdn4.vectorstock.com/i/1000x1000/46/53/spartan-logo-sparta-logo-spartan-helmet-logo-vector-24584653.jpg"
+                alt=""
+              />
+              <h1>Como Soldado Espartan</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                quos ea laudantium, modi distinctio vel excepturi dolorum
+                voluptas atque aperiam eaque. Sit dignissimos doloremque at
+                numquam sunt vitae voluptatibus maxime! Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Ratione, quos totam itaque
+                rerum nihil praesentium dignissimos, nam suscipit autem quidem
+                accusantium voluptates exercitationem ab magni fugiat nesciunt
+                provident veniam neque. Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Nulla rem dignissimos necessitatibus. Libero
+                repudiandae dicta iure repellat dolores inventore asperiores!
+                Excepturi sunt nostrum asperiores aliquam commodi tenetur
+                debitis consectetur dolorum. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Odit illo, debitis laudantium
+                dicta molestias labore natus nemo nulla vel exercitationem autem
+                accusamus in tenetur mollitia corporis, placeat corrupti
+                quibusdam libero.
+              </p>
+            </div>
+          </section>
+        );
+      };
+
+      const Card = () => {
+        return (
+          <div className="mb-12 container mx-auto px-4 box-content  border-4 rounded-md border-purple-700">
+            <h1>Hola Card</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis
+              ipsum tempore sed itaque nemo molestias ab omnis voluptate libero
+              facilis quo id qui, aut voluptatum natus alias veritatis
+              repudiandae unde.
+            </p>
+          </div>
+        );
+      };
+
+      const Contact = () => {
+        return (
+          <section className="flex flex-col justify-center items-center  mb-12 container mx-auto px-4 box-border rounded-md ">
+            <form>
+              <input
+                placeholder="Tu email"
+                className="rounded-xl mx-4 h-8 px-2 shadow-lg  border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+              />
+              <button className="rounded-md px-2 py-1  w-auto text-center text-white  bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 ">
+                Entrele
+              </button>
+            </form>
+          </section>
+        );
+      };
+
+      ReactDOM.render(<App />, document.getElementById("app"));
+    </script>
+  </body>
+</html>
