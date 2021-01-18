@@ -1,5 +1,4 @@
 const SuperHero = (props) => {
-  console.log(props);
   return (
     <section>
       <div>
