@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Kain",
+      "password": "123",
+      "email": "kain@gmail.com"
+    }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "title": "EL primerblog",
+      "body": "lorem ipsum",
+      "likes": 30
+    }
+  ]
+}
