@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.encendido {
+  color: green;
+}
+.apagado {
+  color: red;
+}
