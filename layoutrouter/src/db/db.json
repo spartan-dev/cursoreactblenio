@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Kain",
+      "password": "salemm",
+      "email": "salemm@gmail.com"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "Los pachitos",
+      "body": "lorem ipsum dolor sit amet, consectetur adipiscing el",
+      "likes": 30
+    }
+  ],
+  "playgames": [
+    {
+      "id": 1,
+      "title": "Metal gear solid",
+      "subtitle": "Venom Snake",
+      "sku": "123APG"
+    }
+  ]
+}
