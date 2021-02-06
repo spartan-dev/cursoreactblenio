@@ -36,3 +36,6 @@
     transform: rotate(360deg);
   }
 }
+.header {
+  background-image: url("./images/assests/header.jpg");
+}
