@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "username": "Maria Mercado",
+      "email": "mari@gmail.com.mx",
+      "password": "123134",
+      "id": 5
+    },
+    {
+      "username": "marcos",
+      "password": "malo",
+      "email": "marcos@gmail.com",
+      "id": 7
+    },
+    {
+      "username": "vision",
+      "password": "maligno",
+      "email": "vision@vision.com",
+      "id": 8
+    },
+    {
+      "username": " salemm",
+      "password": "123",
+      "email": "maligno@maligno.com",
+      "id": 9
+    },
+    {
+      "username": "neto2",
+      "email": "neto@neto.com",
+      "password": "malo2",
+      "id": 10
+    }
+  ]
+}
