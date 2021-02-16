@@ -11,10 +11,27 @@ const fetchMovies = async (key, params) => {
   const response = await fetch(`${BASE_URL}now_playing?api_key=${MOVIEKEY}`);
   return response.json();
 };
+const fetchMoviesPopular = async (key, params) => {
+  const response = await fetch(`${BASE_URL}popular?api_key=${MOVIEKEY}`);
+  return response.json();
+};
+const fetchMoviesTop = async (key, params) => {
+  const response = await fetch(`${BASE_URL}top_rated?api_key=${MOVIEKEY}`);
+  return response.json();
+};
 
 const Home = () => {
   const { data, status } = useQuery("movies", fetchMovies);
-  if (status === "loading") {
+  const { data: popular, isLoading: loadingPop } = useQuery(
+    "popmovies",
+    fetchMoviesPopular
+  );
+  const { data: topMovies, isLoading: loadingTop } = useQuery(
+    "topmovies",
+    fetchMoviesTop
+  );
+
+  if (status === "loading" || loadingPop || loadingTop) {
     return <Loading />;
   }
   if (status === "error") {
@@ -25,10 +42,10 @@ const Home = () => {
       <Slider movies={data.results} />
       <Row gutter={[32, 24]}>
         <Col span={12}>
-          <MovieList />
+          <MovieList title="Pelis Pop" movies={popular.results} />
         </Col>
         <Col span={12}>
-          <div>Hola columna 2</div>
+          <MovieList title="Pelis Top" movies={topMovies.results} />
         </Col>
       </Row>
     </div>
