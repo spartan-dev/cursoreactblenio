@@ -23,6 +23,7 @@ const Transversal = ({ children }) => {
         onCollapse={(collapsed, type) => {
           console.log(collapsed, type);
         }}
+        style={{ zIndex: 100 }}
       >
         <Link to="/">
           <div
@@ -60,7 +61,7 @@ const Transversal = ({ children }) => {
       <Layout>
         <Header
           className="site-layout-sub-header-background"
-          style={{ padding: 0 }}
+          style={{ padding: 0, zIndex: 100 }}
         />
         <Content style={{ margin: "24px 16px 0" }}>
           <div

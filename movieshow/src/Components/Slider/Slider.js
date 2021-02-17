@@ -16,7 +16,6 @@ export default Slider;
 
 const Movie = ({ movie }) => {
   const { title, overview, id, backdrop_path } = movie;
-  console.log(movie);
   const backdropPath = `https://image.tmdb.org/t/p/original${backdrop_path}`;
   return (
     <div

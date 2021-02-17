@@ -35,8 +35,7 @@ const MovieList = ({ title, movies }) => {
       title: "Votacion",
       dataIndex: "votacion",
       key: "votacion",
-      render: (text, record) => {
-        console.log(record);
+      render: (text) => {
         return (
           <Space>
             {text >= 8 ? (
