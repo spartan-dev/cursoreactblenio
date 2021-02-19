@@ -6,6 +6,7 @@ import moment from "moment";
 import { useQuery } from "react-query";
 import { BASE_URL, MOVIEKEY } from "../../utils";
 import Loading from "../../Components/Loading";
+import ModalVideo from "../../Components/ModalVideo";
 import "./movie.scss";
 //funciones fetch de movies
 const fetchMovie = async (id) => {
@@ -68,12 +69,17 @@ const MovieInfo = ({ movie }) => {
     if (videoData.results) {
       if (videoData.results.length > 0) {
         return (
-          <div>
-            <button icon={<PlayCircleOutlined />} onClick={openModal}>
+          <>
+            <Button icon={<PlayCircleOutlined />} onClick={openModal}>
               Ver Trailer
-            </button>
-            {/* ... poasar el modal */}
-          </div>
+            </Button>
+            <ModalVideo
+              videoKey={videoData.results[0].key}
+              videoPlatform={videoData.results[0].site}
+              isOpen={isVisibleModal}
+              close={closeModal}
+            />
+          </>
         );
       }
     }
