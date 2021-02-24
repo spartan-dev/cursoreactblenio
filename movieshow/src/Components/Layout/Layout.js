@@ -42,18 +42,14 @@ const Transversal = ({ children }) => {
         </Link>
         <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
           <Menu.Item key="1" icon={<VideoCameraOutlined />}>
-            <Link to="/movie">Movie</Link>
-          </Menu.Item>
-
-          <Menu.Item key="2" icon={<UploadOutlined />}>
             <Link to="/newmovie"> New Movie </Link>
           </Menu.Item>
 
-          <Menu.Item key="3" icon={<SketchOutlined />}>
+          <Menu.Item key="2" icon={<SketchOutlined />}>
             <Link to="/pop"> Populares</Link>
           </Menu.Item>
 
-          <Menu.Item key="4" icon={<SearchOutlined />}>
+          <Menu.Item key="3" icon={<SearchOutlined />}>
             <Link to="/search"> Search </Link>
           </Menu.Item>
         </Menu>
