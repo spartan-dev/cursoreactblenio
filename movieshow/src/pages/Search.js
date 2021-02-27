@@ -12,9 +12,7 @@ const searchMovie = async (searched) => {
   );
   return response.json();
 };
-const Search = (props) => {
-  console.log(props);
-  //const {location, history} = props
+const Search = () => {
   const [searchValue, setSearchValue] = useState("");
   const { data, isLoading, error } = useQuery(
     ["searchedmovies", searchValue],
