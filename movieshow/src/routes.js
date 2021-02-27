@@ -5,7 +5,7 @@ import Movie from "./pages/Movie";
 import NewMovie from "./pages/NewMovies";
 import Pop from "./pages/Populares";
 import Search from "./pages/Search";
-import Error404 from "./pages/Error404";
+import Error404 from "./pages/Error404/Error404";
 import Searchquery from "./pages/Searchquery";
 const Rutas = () => (
   <BrowserRouter>
@@ -16,7 +16,7 @@ const Rutas = () => (
         <Route exact path="/newmovie" component={NewMovie} />
         <Route exact path="/pop" component={Pop} />
         <Route exact path="/search" component={Searchquery} />
-        <Route exact path="/notfound" component={Error404} />
+        <Route exact path="*" component={Error404} />
       </Switch>
     </Layout>
   </BrowserRouter>
